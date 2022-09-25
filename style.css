@@ -28,6 +28,13 @@ a:hover {
 }
 
         /* =============  Ajouts de modifications du style ============= */
+.header__logo-size{
+    width: 100%;
+}
+.image-resize-mode{
+    max-width: 120px;
+    width: 100%;
+}
 .txt-black{
     color: black;
 }
@@ -37,7 +44,9 @@ a:hover {
     background-color: white;
     font-size: 27px;
 }
-
+.style-title-form{
+    padding: 0;
+}
 .style-citation{
     font-size: 20px;
     font-style: italic;
@@ -55,12 +64,72 @@ a:hover {
 .main-txt{
     font-size: 18px;
 }
-
+.form-bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .form-group{
     display: flex;
     flex-direction: column;
     width: 330px;
     margin-bottom: 7px;
+}
+label{
+    font-size: 120%;
+}
+.btn-block{
+    max-width: 330px;
+    width: 80%;
+}
+
+            /* Responsive */
+
+
+@media (max-width: 767px) {
+
+            /* Bloc images */
+    .portfolio-row{
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+    .picture-bloc{
+        max-width: 450px;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 15px;
+    }
+    .picture-bloc-link{        
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+    }
+    .img-responsive{
+        width: 100%;
+        height: 300px;
+    }
+    .bloc-lg{
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+    }
+            /* Formulaire */
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group{
+        max-width: 330px;
+        width: 80%;
+    }    
+            /* Footer */
+    .social{
+        display: flex;
+        justify-content: center;
+        gap: 0 30px;
+    }
 }
 
         /* =============  FIN d'ajouts de modifications du style ============= */
@@ -126,12 +195,6 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-
-
-.b-parallax {
-    background-attachment: fixed;
 }
 
 
@@ -880,33 +943,15 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-}
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-}
 
 @media (max-width: 991px) {
     .container {
         width: 100%;
     }
-    .b-parallax {
-        background-attachment: scroll;
-    }
     .page-container,
     #hero-bloc {
         overflow-x: hidden;
         position: relative;
-    }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -916,8 +961,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -936,9 +979,6 @@ h4 {
     #disqus_thread {
         padding-left: 10px!important;
         padding-right: 10px!important;
-    }
-    .b-parallax {
-        background-attachment: scroll;
     }
     .navbar .nav {
         padding-top: 0;
@@ -995,7 +1035,6 @@ h4 {
     }
     .navbar-brand img {
         max-height: 40px;
-        width: auto;
     }
     .nav-invert .navbar-header {
         float: none;
